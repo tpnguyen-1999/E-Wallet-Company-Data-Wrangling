@@ -142,6 +142,7 @@ unique_team_by_product[unique_team_by_product['team_own'] !=1]
 - Results
 
 |product_id|	team_own|
+|----------|----------|
 |3|	0|
 |1976|	0|
 |10033| 0|	
