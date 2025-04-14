@@ -134,6 +134,8 @@ top_3_product
 |429|	14667676567|
 |372|	13713658515|
 
+Product 1976 accounts for a significantly higher volume than the others—about four times more than the next product. This suggests it plays a key role in the E-wallet company's business and should be prioritized for promotion and strategic focus.
+
 **4.2: Given that 1 product_id is only owed by 1 team, are there any abnormal products against this rule?**
 - Python code
 ~~~python
@@ -147,6 +149,8 @@ unique_team_by_product[unique_team_by_product['team_own'] !=1]
 |3|	0|
 |1976|	0|
 |10033| 0|	
+
+Assigning a team to each product is key to maintaining accountability and operational efficiency. The analysis found that some products — including the highest-volume Product 1976 — have no team ownership, which may hinder performance tracking and strategic oversight. This should be resolved as a priority.
 
 **4.3: Find the team has had the lowest performance (lowest volume) since Q2.2023. Find the category that contributes the least to that team.**
 - Python code
@@ -179,6 +183,8 @@ print(f"Category that contributes the least to {lowest_performance_team} is:{low
 The lowest performing team since Q2.20023 is:APS\
 Category that contributes the least to APS is:PXXXXXE
 
+The performance of APS needs improvement. With PXXXXXE being the least contributing category, it suggests the team may be facing challenges in this area. It's crucial to identify the underlying causes and provide support to help APS enhance its performance.
+
 **4.4: Find the contribution of source_ids of refund transactions (payment_group = ‘refund’), what is the source_id with the highest contribution?**
 - Python code
 ~~~python
@@ -194,6 +200,8 @@ print(f"Source ID with the highest contribution to refund trasactions is: {highe
 ~~~
 - Results\
 Source ID with the highest contribution to refund trasactions is: 38
+
+Source ID 38 dominates refund transactions, indicating a potential issue. It’s important to investigate the causes, such as product quality or customer concerns. Addressing these factors can help reduce refunds and improve the overall customer experience.
 
 ### Using transactions.csv
 **4.5: Define type of transactions (‘transaction_type’) for each row, given:**\
@@ -265,3 +273,13 @@ transaction_type_summary
 |Top Up Money Transaction|	290502|	108606478829|	110409|	110409|
 |Transfer Money Transaction|	341177|	37033171492|	39021|	34585|
 |Withdraw Money Transaction|	33725|	23418181420|	24814|	24814|
+
+- Top-Up Money Transactions dominate in volume, reaching over 108 billion, closely followed by Payment Transactions at 71.85 billion. This indicates that users are regularly adding funds to their accounts.
+- Payment Transactions lead in both transaction volume (398,677) and the number of senders and receivers. This indicates that payments are the most frequent transaction type, reflecting high activity in daily purchases or services.
+- Transfer Money Transactions also show significant activity, with 341,177 transactions and a volume exceeding 37 billion. This suggests a large number of users are utilizing the e-wallet for peer-to-peer transfers.
+
+## 5. Conclusion
+- The project concentrated on the data wrangling process, cleaning, transforming, and organizing different datasets for analysis.
+- After wrangling the data, key insights were gained about the E-wallet company’s business, including transaction volumes, product performance, and customer behavior.
+- The insights uncovered help guide business strategies and operational improvements for future growth.
+
